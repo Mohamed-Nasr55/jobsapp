@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jobsapp/core/theme/app_colors.dart';
 import 'package:jobsapp/core/theme/text_styles.dart';
 
@@ -10,12 +11,12 @@ class customTextFeild extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
-        contentPadding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+        contentPadding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
         fillColor: AppColors.secondaryColor,
         filled: true,
         border: OutlineInputBorder(
           borderSide: BorderSide(color: AppColors.primaryColor),
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(10.r),
         ),
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(color: Colors.white),
