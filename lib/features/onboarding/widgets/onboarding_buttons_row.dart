@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jobsapp/core/helper/strings.dart';
 import 'package:jobsapp/core/theme/app_colors.dart';
 import 'package:jobsapp/features/auth/login/login_screen.dart';
@@ -16,7 +17,7 @@ class OnBoardingButtonsRow extends StatelessWidget {
             elevation: 4,
             backgroundColor: AppColors.primaryColor,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(12)),
+              borderRadius: BorderRadius.all(Radius.circular(12.r)),
             ),
           ),
           onPressed: () {
@@ -26,12 +27,12 @@ class OnBoardingButtonsRow extends StatelessWidget {
             );
           },
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
             child: Text(
               Strings.loginText,
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 17,
+                fontSize: 17.sp,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -44,7 +45,7 @@ class OnBoardingButtonsRow extends StatelessWidget {
             Strings.registerText,
             style: TextStyle(
               color: Colors.black,
-              fontSize: 17,
+              fontSize: 17.sp,
               fontWeight: FontWeight.w500,
             ),
           ),

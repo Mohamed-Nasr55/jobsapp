@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jobsapp/core/helper/images.dart';
 import 'package:jobsapp/core/helper/strings.dart';
 import 'package:jobsapp/core/theme/app_colors.dart';
@@ -25,10 +26,10 @@ class OnboardingScreen extends StatelessWidget {
         ),
         actions: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            padding:  EdgeInsets.symmetric(horizontal: 16.w),
             child: Icon(
               Icons.arrow_forward_ios,
-              size: 20,
+              size: 20.sp,
               color: AppColors.primaryColor,
             ),
           ),
@@ -36,15 +37,15 @@ class OnboardingScreen extends StatelessWidget {
       ),
 
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        padding:  EdgeInsets.symmetric(horizontal: 20.w),
         child: Column(
           children: [
             Image.asset(Images.onboardingImage),
             OnBoardingTitle(),
 
-            SizedBox(height: 20),
+            SizedBox(height: 20.h),
             OnBoardingDesc(),
-            SizedBox(height: 40),
+            SizedBox(height: 40.h),
 
             OnBoardingButtonsRow(),
           ],

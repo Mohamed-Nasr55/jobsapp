@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:jobsapp/core/theme/app_colors.dart';
 import 'package:jobsapp/features/home/home_screen.dart';
 import 'package:jobsapp/features/messages/messages_screen.dart';
-import 'package:jobsapp/features/profile/profile_screen.dart';
+import 'package:jobsapp/features/notifications/notifications_screen.dart';
 import 'package:jobsapp/features/saved/saved_screen.dart';
 
 class CustomBottomNavBarScreen extends StatefulWidget {
@@ -18,7 +19,7 @@ class _BottomNavBarWidgetState extends State<CustomBottomNavBarScreen> {
     HomeScreen(),
     MessagesScreen(),
     SavedScreen(),
-    ProfileScreen(),
+    NotificationsScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -32,11 +33,12 @@ class _BottomNavBarWidgetState extends State<CustomBottomNavBarScreen> {
     return Scaffold(
       body: _screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        
-        backgroundColor: Colors.grey.shade300,
+        backgroundColor: AppColors.secondaryColor,
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
         type: BottomNavigationBarType.fixed,
+        selectedItemColor: AppColors.primaryColor,
+        unselectedItemColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.message), label: 'Messages'),
@@ -44,7 +46,10 @@ class _BottomNavBarWidgetState extends State<CustomBottomNavBarScreen> {
             icon: Icon(Icons.save_rounded),
             label: 'Saved',
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notifications),
+            label: 'Notifications',
+          ),
         ],
       ),
     );
